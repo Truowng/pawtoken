@@ -468,17 +468,20 @@ img {
         line-height: 30px;
         margin-bottom: 13px;
         &:nth-child(1) {
-          color: #8e8fb3;
+          color: #ff92b5;
         }
         &:nth-child(2) {
-          color: #ff5c64;
+          color: #6b184e;
         }
 
         &:nth-child(3) {
-          color: #6b184e;
+          color: #8e8fb3;
         }
         &:nth-child(4) {
-          color: $pink;
+          color: #313131;
+        }
+        &:nth-child(5) {
+          color: #ff5c64;
         }
       }
     }

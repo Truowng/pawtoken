@@ -543,16 +543,19 @@ img {
   margin-bottom: 13px;
 }
 #tokenomics .tokenomics-content .list .item:nth-child(1) {
-  color: #8e8fb3;
+  color: #ff92b5;
 }
 #tokenomics .tokenomics-content .list .item:nth-child(2) {
-  color: #ff5c64;
-}
-#tokenomics .tokenomics-content .list .item:nth-child(3) {
   color: #6b184e;
 }
+#tokenomics .tokenomics-content .list .item:nth-child(3) {
+  color: #8e8fb3;
+}
 #tokenomics .tokenomics-content .list .item:nth-child(4) {
-  color: #ff92b5;
+  color: #313131;
+}
+#tokenomics .tokenomics-content .list .item:nth-child(5) {
+  color: #ff5c64;
 }
 
 #footer {
