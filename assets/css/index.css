@@ -14,8 +14,9 @@ body {
   font-size: 16px;
   font-weight: 400;
   font-family: "Fira Sans", sans-serif;
-  background-color: #f5e9ee;
+  background-color: #f0eeef;
   overflow-x: hidden;
+  color: #2f2b28;
 }
 
 ul,
@@ -37,11 +38,11 @@ h6 {
 }
 
 a {
-  color: #000;
+  color: #2f2b28;
   text-decoration: none;
 }
 a:hover {
-  color: #000;
+  color: #2f2b28;
 }
 
 img {
@@ -50,23 +51,23 @@ img {
 
 .button {
   outline: none;
-  border: 1px solid #000;
+  border: 1px solid #2f2b28;
   border-radius: 500px;
   text-transform: uppercase;
   font-family: "Dela Gothic One", sans-serif;
-  color: #000 !important;
+  color: #2f2b28 !important;
   background: transparent;
   text-align: center;
   padding: 12px 24px;
   transition: all ease 0.5s;
 }
 .button:hover {
-  background-color: #ff92b5;
+  background-color: #cc312f;
 }
 
 .heading-block .badge {
   padding: 0;
-  color: #ff92b5;
+  color: #cc312f;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   line-height: 24px;
@@ -140,7 +141,7 @@ img {
     width: 100vw;
     height: 100vh;
     flex-direction: column;
-    background-color: #ff92b5;
+    background-color: #cc312f;
     justify-content: center;
     transform: translateX(-100%);
     z-index: 200;
@@ -170,7 +171,7 @@ img {
   left: 0;
   width: 0%;
   height: 3px;
-  background-color: #000;
+  background-color: #2f2b28;
   transition: all ease 0.75s;
 }
 #header .header-link-list .close-button {
@@ -223,6 +224,7 @@ img {
   border: none;
   margin-left: 30px;
   width: 29px;
+  background-color: transparent;
 }
 @media only screen and (max-width: 991px) {
   #header .menu-button {
@@ -231,13 +233,21 @@ img {
 }
 
 #banner {
-  background: url(../images/26.png) no-repeat center;
+  background: url(../images/26.png) no-repeat bottom;
   background-size: cover;
   height: 100vh;
+  margin-top: -82px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: unset;
+}
+@media only screen and (max-width: 991px) {
+  #banner {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 100px 0;
+  }
 }
 #banner .banner-wrapper {
   display: flex;
@@ -245,12 +255,13 @@ img {
   align-items: center;
   gap: 10px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   #banner .banner-wrapper {
     flex-direction: column;
+    gap: 100px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   #banner .heading-block .badge {
     margin-left: auto;
     margin-right: auto;
@@ -259,17 +270,18 @@ img {
 }
 #banner .heading-block .title {
   font-family: "Exo 2", sans-serif;
-  font-size: 64px;
+  font-size: 50px;
   font-weight: 700;
-  line-height: 76px;
+  line-height: 60px;
   max-width: 604px;
   text-transform: uppercase;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   #banner .heading-block .title {
     text-align: center;
     font-size: 54px;
     line-height: 60px;
+    max-width: unset;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -281,7 +293,7 @@ img {
 #banner .heading-block .desc {
   max-width: 631px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   #banner .heading-block .desc {
     max-width: unset;
     text-align: center;
@@ -297,7 +309,10 @@ img {
   }
 }
 
-@media only screen and (max-width: 767px) {
+#about {
+  margin-top: 100px;
+}
+@media only screen and (max-width: 991px) {
   #about {
     margin-top: 100px;
   }
@@ -308,15 +323,22 @@ img {
   align-items: center;
   gap: 48px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   #about .about-wrapper {
     flex-direction: column-reverse;
   }
 }
 #about .about-image {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
 }
-@media only screen and (max-width: 767px) {
+#about .about-image img {
+  width: 80%;
+}
+@media only screen and (max-width: 991px) {
   #about .about-image {
     width: 70%;
   }
@@ -324,7 +346,7 @@ img {
 #about .about-content {
   width: 50%;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   #about .about-content {
     width: 100%;
   }
@@ -332,7 +354,7 @@ img {
 #about .about-content .heading-block .title {
   margin-bottom: 16px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   #about .about-content .heading-block .title {
     text-align: center;
   }
@@ -340,7 +362,7 @@ img {
 #about .about-content .para {
   margin-bottom: 20px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   #about .about-content .para {
     text-align: center;
   }
@@ -420,7 +442,7 @@ img {
 #roadmap .roadmap-item .heading .title {
   font-size: 24px;
   line-height: 30px;
-  color: #ff92b5;
+  color: #cc312f;
   font-family: "Dela Gothic One", sans-serif;
   transform: translateX(-20px);
 }
@@ -510,8 +532,8 @@ img {
   width: 100%;
   padding: 34.5px 45px 34.5px;
   border-radius: 16px;
-  border: 1px solid #ff92b5;
-  background-color: rgba(255, 146, 181, 0.2);
+  border: 1px solid #cc312f;
+  background-color: rgba(204, 49, 47, 0.2);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }

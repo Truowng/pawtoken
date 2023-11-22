@@ -10,6 +10,7 @@ body {
   font-family: $font-fira;
   background-color: $white-2;
   overflow-x: hidden;
+  color: $black;
 }
 
 ul,
@@ -54,14 +55,14 @@ img {
   padding: 12px 24px;
   transition: all ease 0.5s;
   &:hover {
-    background-color: $pink;
+    background-color: $red;
   }
 }
 
 .heading-block {
   .badge {
     padding: 0;
-    color: $pink;
+    color: $red;
     font-family: $font-robo;
     font-weight: 500;
     line-height: 24px;
@@ -119,7 +120,7 @@ img {
       width: 100vw;
       height: 100vh;
       flex-direction: column;
-      background-color: $pink;
+      background-color: $red;
       justify-content: center;
       transform: translateX(-100%);
       z-index: 200;
@@ -199,6 +200,7 @@ img {
     border: none;
     margin-left: 30px;
     width: 29px;
+    background-color: transparent;
     @include tablet {
       display: block;
     }
@@ -206,20 +208,26 @@ img {
 }
 
 #banner {
-  background: url(../images/26.png) no-repeat center;
+  background: url(../images/26.png) no-repeat bottom;
   background-size: cover;
   height: 100vh;
+  margin-top: -82px;
   @include flex(space-between, center, unset);
+  @include tablet {
+    height: fit-content;
+    padding: 100px 0;
+  }
 
   .banner-wrapper {
     @include flex(space-between, center, 10px);
-    @include landscape-phone {
+    @include tablet {
       flex-direction: column;
+      gap: 100px;
     }
   }
   .heading-block {
     .badge {
-      @include landscape-phone {
+      @include tablet {
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -227,15 +235,16 @@ img {
     }
     .title {
       font-family: $font-exo;
-      font-size: 64px;
+      font-size: 50px;
       font-weight: 700;
-      line-height: 76px;
+      line-height: 60px;
       max-width: 604px;
       text-transform: uppercase;
-      @include landscape-phone {
+      @include tablet {
         text-align: center;
         font-size: 54px;
         line-height: 60px;
+        max-width: unset;
       }
       @include mobile {
         font-size: 36px;
@@ -244,7 +253,7 @@ img {
     }
     .desc {
       max-width: 631px;
-      @include landscape-phone {
+      @include tablet {
         max-width: unset;
         text-align: center;
       }
@@ -260,38 +269,43 @@ img {
 }
 
 #about {
-  @include landscape-phone {
+  margin-top: 100px;
+  @include tablet {
     margin-top: 100px;
   }
   .about-wrapper {
     @include flex(space-between, center, 48px);
-    @include landscape-phone {
+    @include tablet {
       flex-direction: column-reverse;
     }
   }
   .about-image {
     width: 50%;
-    @include landscape-phone {
+    @include flex(center, center, unset);
+    img {
+      width: 80%;
+    }
+    @include tablet {
       width: 70%;
     }
   }
 
   .about-content {
     width: 50%;
-    @include landscape-phone {
+    @include tablet {
       width: 100%;
     }
     .heading-block {
       .title {
         margin-bottom: 16px;
-        @include landscape-phone {
+        @include tablet {
           text-align: center;
         }
       }
     }
     .para {
       margin-bottom: 20px;
-      @include landscape-phone {
+      @include tablet {
         text-align: center;
       }
     }
@@ -354,7 +368,7 @@ img {
       .title {
         font-size: 24px;
         line-height: 30px;
-        color: $pink;
+        color: $red;
         font-family: $font-dela;
         transform: translateX(-20px);
       }
@@ -439,8 +453,8 @@ img {
     width: 100%;
     padding: 34.5px 45px 34.5px;
     border-radius: 16px;
-    border: 1px solid $pink;
-    background-color: rgba($color: $pink, $alpha: 0.2);
+    border: 1px solid $red;
+    background-color: rgba($color: $red, $alpha: 0.2);
     backdrop-filter: blur(10px);
     .title {
       font-size: 24px;
