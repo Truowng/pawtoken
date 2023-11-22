@@ -284,6 +284,9 @@ img {
     @include flex(center, center, unset);
     img {
       width: 80%;
+      @include tablet {
+        width: 100%;
+      }
     }
     @include tablet {
       width: 70%;

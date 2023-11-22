@@ -339,6 +339,11 @@ img {
   width: 80%;
 }
 @media only screen and (max-width: 991px) {
+  #about .about-image img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 991px) {
   #about .about-image {
     width: 70%;
   }
